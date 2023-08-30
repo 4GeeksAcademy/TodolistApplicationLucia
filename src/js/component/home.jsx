@@ -37,8 +37,13 @@ const Home = () => {
 	// 	setLista(lista.concat(""))
 
 	const borrar = (tarea) => {
-		setLista(lista.filter(item => item !== tarea))
-	}
+		if (setLista.length === 0) {
+			alert("No hay tareas, añadir tareas");
+		}
+		setLista(lista.filter(item => item !== tarea));
+	};
+
+
 
 
 
